@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>piotr kukielka</title>
+  <title>Debugging implicits - piotr kukielka</title>
   <meta name="author" content="Piotr Kukiełka">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://pkukielka.github.io">
+  <link rel="canonical" href="http://pkukielka.github.io/blog/2014/09/14/debugging-implicits">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -48,7 +48,7 @@
   	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
   	      <ul class="nav">
     
-        <li class="active"><a href="/index.html">Blog</a></li>
+        <li ><a href="/index.html">Blog</a></li>
     
         <li ><a href="/blog/archives/index.html">Archives</a></li>
     
@@ -81,30 +81,14 @@
   <div class="container" id="main">
       <div class="row-fluid">
         <div id="content">
-          <div class="jumbotron">
-  <div class="container">
-    
-      piotr kukielka
-    
-    <h3 class="tagline">
-      
-        If I had more time, I would have written it shorter
-      
-    </h3>
-  </div>
-</div>
-
-
-<div class="blog-index">
+          <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
 
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
+  <header>
+  <div class="jumbotron">
+    Debugging Implicits
+	<h5>
 
 
 
@@ -117,27 +101,10 @@
 
 
 <i class="icon-calendar-empty"></i> <time datetime="2014-09-14T18:51:50+02:00" pubdate data-updated="true"></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/debugging/"><span class="badge">debugging</span></a>
-          
-          <a href="/blog/categories/implicits/"><span class="badge">implicits</span></a>
-          
-          <a href="/blog/categories/macro/"><span class="badge">macro</span></a>
-          
-          <a href="/blog/categories/scala/"><span class="badge">scala</span></a>
-          
-          <a href="/blog/categories/typeclasses/"><span class="badge">typeclasses</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/09/14/debugging-implicits/">Debugging implicits</a></h1>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
       <p>I was recently asked what are my favorite and least favorite Scala features. A couple options comes to mind, but I decided to give one answer for both questions: implicits. Why? Implicits are very simple and yet very powerful concept and as it usually happens, with great power comes great responsibility. They can be used for implicit parameters, implicit conversions, view bonds and context bounds (type classes) letting us solve couple of different problems with one language feature. But at the same time we must be aware in what context we are using them and - which is much harder - which implicits are available in the current context.</p>
 
 <p>Luckily we are not left alone with that problem. Main Scala IDEs like <a href="http://scala-ide.org/docs/current-user-doc/features/typingviewing/implicit-highlighting/index.html">ScalaIDE</a> or <a href="http://confluence.jetbrains.com/display/IntelliJIDEA/Working+with+Scala+Implicit+Conversions">IntelliJ</a> are able to list currently used implicits and we can do the same in REPL as well.</p>
@@ -746,22 +713,76 @@ Both approaches guarantees full control over the code, because we can always pas
 Yes, in cases you are lost and really need to debug implicits you need to know your tools.<br/>
 But is that really a bad thing?</p>
 
-      
-      
     </div>
   </div>
 
 
 
-    </article>
+  <footer>
+    <hr>
     
-  
-  <div class="pagination">
-    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
 
-    
+
+
+  <a href="/blog/categories/debugging/"><span class="badge">debugging</span></a>
+
+  <a href="/blog/categories/implicits/"><span class="badge">implicits</span></a>
+
+  <a href="/blog/categories/macro/"><span class="badge">macro</span></a>
+
+  <a href="/blog/categories/scala/"><span class="badge">scala</span></a>
+
+  <a href="/blog/categories/typeclasses/"><span class="badge">typeclasses</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
   </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 
 
         </div>
@@ -783,7 +804,10 @@ But is that really a bad thing?</p>
       var disqus_shortname = 'pkukielka';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://pkukielka.github.io/blog/2014/09/14/debugging-implicits/';
+        var disqus_url = 'http://pkukielka.github.io/blog/2014/09/14/debugging-implicits/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
